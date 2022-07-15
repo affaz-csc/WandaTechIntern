@@ -1,0 +1,31 @@
+﻿@model List<wandaTechIntern.Data.Models.Delivery>
+@{
+    ViewData["Title"] = "Deliveries";
+}
+
+<h1>@Model.Count() Deliveries</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>TimeOfDelivery</th>
+            <th>PostedTime</th>
+            <th>TotalPoints</th>
+            <th>TotalValue</th>
+            <th>DeliveryPoints</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.TimeOfDelivery</td>
+                <td>@item.PostedTime</td>
+                <td>@item.TotalPoints</td>
+                <td>@item.TotalValue</td>
+                <td>@item.DeliveryPoints.Count()</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
