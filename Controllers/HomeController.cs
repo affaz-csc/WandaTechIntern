@@ -35,8 +35,10 @@ namespace wandaTechIntern.Controllers
             var allDeliveries = context.Deliveries
                 .Include(t=> t.DeliveryPoints).ToList();
 
-            var allDelToday = context.Deliveries
-                .Where(x => x.PostedTime.Date == DateTime.Now.Date).ToList();
+            var allDelToday = context.Deliveries.First();
+
+                // .Where(x => x.PostedTime.Date == DateTime.Now.Date)
+                // .ToList();
             return View(allDeliveries);
 
             // INSERT

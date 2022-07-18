@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Affaz/source/repos/wandaTechIntern/wandaTechIntern/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Affaz/source/repos/wandaTechIntern/wandaTechIntern/Views/Account/VerifyOtp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlPdHAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Affaz/source/repos/wandaTechIntern/wandaTechIntern/Views/Home/Deliveries.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxpdmVyaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
