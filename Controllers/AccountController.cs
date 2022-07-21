@@ -19,6 +19,7 @@ namespace wandaTechIntern.Controllers
         
         public IActionResult Register()
         {
+            ViewBag.ErrorMessage = userService.ErrorMessage;
             return View();
         }
 
@@ -32,13 +33,28 @@ namespace wandaTechIntern.Controllers
                 return View();
             }
 
-            return RedirectToAction("VerifyOtp");
+            return RedirectToAction("VerifyOtp", new { id = userService.UserId });
         }
 
-        public IActionResult VerifyOtp()
+        public IActionResult VerifyOtp(string id)
         {
-            return View();
+            var vm = new OtpEnterVm {
+                UserId = id,
+            };
+            return View(vm);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> VerifyOtp(OtpEnterVm vm)
+        {
+            var result = await userService.VerifyOtpAndSaveUser(vm.OtpCode, vm.UserId);
+            if(result == false){
+                // ModelState.AddModelError("", userService.ErrorMessage);
+                ViewBag.ErrorMessage = userService.ErrorMessage;
+                return View(vm);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

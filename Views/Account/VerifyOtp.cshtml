@@ -1,7 +1,20 @@
-﻿@{
+﻿@model OtpEnterVm
+@{
     ViewData["Title"] = "Register";
 }
 
 <div class="text-center">
     <h1 class="display-4">OTP Verification</h1>
+    
+@if(ViewBag.ErrorMessage != null){
+    <h2 class="text-danger">@ViewBag.ErrorMessage</h2>
+}
+    <form asp-action="VerifyOtp">
+        <div class="form-group">
+            <input type="hidden" asp-for="UserId" />
+            <input type="text" asp-for="OtpCode" />
+
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
 </div>

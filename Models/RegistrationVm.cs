@@ -5,7 +5,7 @@ namespace wandaTechIntern.Models
     public class RegisterUserVm
     {
         [MaxLength(10, ErrorMessage = "Max length is 10")]
-        [Required]
+        [Required(ErrorMessage = "Name is needed for now!")]
         public string Name { get; set; }
 
         [MinLength(2, ErrorMessage = "The minimun shoud be atleast 2 characters")]
@@ -16,5 +16,14 @@ namespace wandaTechIntern.Models
 
         [Required]
         public string Email { get; set; }
+    }
+
+     public class OtpEnterVm
+    {
+        [Required]
+        public string UserId { get; set; }
+
+        [Required]
+        public string OtpCode { get; set; }
     }
 }
